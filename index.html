@@ -1,169 +1,214 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-TW" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>呂氏家庭隊職幹部個人簡介 - 呂佳寯</title>
-    <style>
-        :root {
-            --primary-color: #1a365d;
-            --secondary-color: #2b6cb0;
-            --accent-color: #e2e8f0;
-            --text-color: #2d3748;
-            --bg-color: #f7fafc;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>獎學金專區 SCHOLARSHIP - 呂氏家庭生活資訊網</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <!-- PWA Manifest 與 手機捷徑設定 -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ea580c">
+  
+  <!-- iOS 專屬最佳化標籤 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="呂氏家庭獎學金">
+  <link rel="apple-touch-icon" href="icon.jpg">
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-        .profile-card {
-            background: #ffffff;
-            width: 100%;
-            max-width: 480px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-            border-top: 6px solid var(--primary-color);
-        }
-
-        .profile-header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: #ffffff;
-            padding: 24px;
-            text-align: center;
-        }
-
-        .profile-header h1 {
-            font-size: 1.5rem;
-            letter-spacing: 1px;
-            margin-bottom: 6px;
-        }
-
-        .profile-header .title {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            font-weight: 500;
-        }
-
-        .profile-body {
-            padding: 30px 24px;
-        }
-
-        .avatar-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 24px;
-        }
-
-        .avatar {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #ffffff;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .info-list {
-            list-style: none;
-        }
-
-        .info-item {
-            display: flex;
-            padding: 12px 0;
-            border-bottom: 1px solid var(--accent-color);
-        }
-
-        .info-item:last-child {
-            border-bottom: none;
-        }
-
-        .info-label {
-            flex: 0 0 110px;
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-
-        .info-value {
-            flex: 1;
-            color: var(--text-color);
-            line-height: 1.5;
-            word-break: break-all;
-        }
-
-        .info-value a {
-            color: var(--secondary-color);
-            text-decoration: none;
-        }
-
-        .info-value a:hover {
-            text-decoration: underline;
-        }
-
-        .profile-footer {
-            background-color: var(--accent-color);
-            padding: 12px;
-            text-align: center;
-            font-size: 0.85rem;
-            color: #718096;
-        }
-    </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+    body { font-family: "Noto Sans TC", sans-serif; background: #fffaf5; color: #1e293b; overflow-x: hidden; }
+    .glass-card { backdrop-filter: blur(16px); background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(234, 88, 12, 0.15); }
+    .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+  </style>
 </head>
-<body>
 
-    <div class="profile-card">
-        <div class="profile-header">
-            <h1>呂氏家庭隊職幹部</h1>
-            <div class="title">營務官</div>
-        </div>
-        
-        <div class="profile-body">
-            <div class="avatar-container">
-                <img src="110417006.jpg" alt="呂佳寯照片" class="avatar">
-            </div>
-            
-            <ul class="info-list">
-                <li class="info-item">
-                    <span class="info-label">姓名</span>
-                    <span class="info-value">呂佳寯</span>
-                </li>
-                <li class="info-item">
-                    <span class="info-label">出生地／籍貫</span>
-                    <span class="info-value">新北市</span>
-                </li>
-                <li class="info-item">
-                    <span class="info-label">學歷</span>
-                    <span class="info-value">聖約翰科技大學創意設計系</span>
-                </li>
-                <li class="info-item">
-                    <span class="info-label">工作職掌</span>
-                    <span class="info-value">負責單位總務、行政、政戰事務。</span>
-                </li>
-                <li class="info-item">
-                    <span class="info-label">聯絡信箱</span>
-                    <span class="info-value"><a href="mailto:lujiajun20020501@gmail.com">lujiajun20020501@gmail.com</a></span>
-                </li>
-            </ul>
-        </div>
-        
-        <div class="profile-footer">
-            個人簡介資訊
-        </div>
+<body class="flex flex-col min-h-screen">
+
+  <!-- 頂部導覽列 -->
+  <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-40 border-b border-orange-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center gap-4">
+      <div class="flex items-center gap-3 shrink-0">
+        <a href="index.html" class="w-10 h-10 rounded-xl bg-orange-600 flex items-center justify-center text-white shadow-md hover:opacity-85 transition-opacity"><i class="fa-solid fa-house"></i></a>
+        <a href="index.html" class="font-black text-base sm:text-lg text-slate-800 hover:text-orange-600 transition-colors tracking-wider uppercase">呂氏家庭 <span class="text-orange-600 text-xs font-bold">LU FAMILY</span></a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="px-4 py-2 rounded-xl bg-orange-50 hover:bg-orange-100 text-orange-700 text-xs font-black transition-all flex items-center gap-2">
+          <i class="fa-solid fa-arrow-left"></i> 返回首頁
+        </a>
+      </div>
     </div>
+  </nav>
 
+  <!-- 頁面主標題區 -->
+  <header class="bg-gradient-to-br from-orange-600 to-amber-700 text-white py-12 px-4 shadow-lg relative overflow-hidden">
+    <div class="absolute -right-10 -bottom-10 w-80 h-80 bg-white/10 rounded-full pointer-events-none"></div>
+    <div class="max-w-5xl mx-auto relative z-10 text-center" data-aos="fade-down">
+      <span class="text-xs font-black tracking-widest uppercase bg-white/20 px-4 py-1.5 rounded-full backdrop-blur-md inline-block mb-3">LU FAMILY SCHOLARSHIP</span>
+      <h1 class="text-3xl sm:text-5xl font-black tracking-wider uppercase mb-3">獎學金與補助專區</h1>
+      <p class="text-orange-100 text-sm sm:text-base font-medium">提供新北市回饋地方經費勤學獎助學金及家族宗親專案申請資訊</p>
+    </div>
+  </header>
+
+  <!-- 獎學金內容主區塊 -->
+  <main class="py-12 flex-grow">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-8">
+
+      <!-- 分類篩選與操作列 -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white p-4 rounded-3xl border border-orange-100 shadow-sm">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-black text-slate-500 uppercase tracking-wider ml-2">專案分類：</span>
+        </div>
+        <div class="flex items-center gap-1.5 bg-orange-50 p-1.5 rounded-2xl border border-orange-200">
+          <button type="button" onclick="filterScholarship('all')" id="schTab-all" class="px-4 py-2 rounded-xl bg-orange-600 text-white font-black text-xs transition-all cursor-pointer shadow-sm">全部顯示</button>
+          <button type="button" onclick="filterScholarship('local')" id="schTab-local" class="px-4 py-2 rounded-xl text-slate-700 hover:text-orange-600 font-black text-xs transition-all cursor-pointer">地方回饋專案</button>
+          <button type="button" onclick="filterScholarship('clan')" id="schTab-clan" class="px-4 py-2 rounded-xl text-slate-700 hover:text-orange-600 font-black text-xs transition-all cursor-pointer">宗親專案</button>
+        </div>
+      </div>
+
+      <!-- 獎學金卡片列表 -->
+      <div class="grid grid-cols-1 gap-6" id="scholarshipListContainer">
+
+        <!-- 卡片 1：新北市回饋地方 -->
+        <div class="sch-card bg-white rounded-[32px] p-6 sm:p-8 border border-slate-200 shadow-xl flex flex-col justify-between hover:border-orange-500 transition-all group" data-category="local" data-aos="fade-up">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+              <span class="px-4 py-1.5 rounded-full bg-orange-100 text-orange-700 font-black text-xs uppercase flex items-center gap-2">
+                <i class="fa-solid fa-location-dot"></i> 新北市回饋地方專案
+              </span>
+              <span class="text-xs font-black text-slate-400">115年度</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-black text-slate-900 group-hover:text-orange-600 transition-colors mb-3">
+              新北市立殯儀館及火化場 115 年度回饋地方經費勤學獎助學金
+            </h3>
+            <div class="space-y-2.5 text-xs sm:text-sm font-medium text-slate-600 mb-6 bg-slate-50 p-5 rounded-2xl border border-slate-100">
+              <p><strong class="text-slate-800">• 申辦對象：</strong>設籍於新北市板橋區宏翠里學生，奮發向學且品學兼優之學子。</p>
+              <p><strong class="text-slate-800">• 發放與截止：</strong>115 年度申請與發放作業已於 11 月 7 日圓滿完成。</p>
+              <p><strong class="text-slate-800">• 檢附文件：</strong>申請書、在學證明或學生證正反面影本、前一學期成績單及戶口名簿。</p>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span class="text-xs font-bold text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 申請狀態：已截止</span>
+            <button type="button" onclick="openApplicationDetail('local')" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-black text-xs uppercase transition-all cursor-pointer">
+              查看詳細辦法
+            </button>
+          </div>
+        </div>
+
+        <!-- 卡片 2：家族宗親專案 -->
+        <div class="sch-card bg-white rounded-[32px] p-6 sm:p-8 border border-slate-200 shadow-xl flex flex-col justify-between hover:border-orange-500 transition-all group" data-category="clan" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+              <span class="px-4 py-1.5 rounded-full bg-orange-100 text-orange-700 font-black text-xs uppercase flex items-center gap-2">
+                <i class="fa-solid fa-users"></i> 家族宗親專案
+              </span>
+              <span class="text-xs font-black text-slate-400">115年度</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-black text-slate-900 group-hover:text-orange-600 transition-colors mb-3">
+              祭祀公業法人桃園縣呂孟生公派下員子女獎學金申請
+            </h3>
+            <div class="space-y-2.5 text-xs sm:text-sm font-medium text-slate-600 mb-6 bg-slate-50 p-5 rounded-2xl border border-slate-100">
+              <p><strong class="text-slate-800">• 申辦對象：</strong>祭祀公業法人桃園縣呂孟生公派下員之在學子女。</p>
+              <p><strong class="text-slate-800">• 設立宗旨：</strong>鼓勵宗親後代勤奮向學、傳承家族優良美德與文化。</p>
+              <p><strong class="text-slate-800">• 審查重點：</strong>依據各學制學期總平均成績與操行表現進行綜合評定。</p>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span class="text-xs font-bold text-slate-400"><i class="fa-regular fa-clock mr-1"></i> 申請狀態：已截止</span>
+            <button type="button" onclick="openApplicationDetail('clan')" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-black text-xs uppercase transition-all cursor-pointer">
+              查看詳細辦法
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- 詳情彈出視窗 Modal -->
+  <div id="schModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-900/60 backdrop-blur-sm hidden" onclick="closeSchModal()">
+    <div class="bg-white text-slate-800 rounded-[35px] shadow-2xl p-6 sm:p-10 w-full max-w-2xl border border-orange-100 relative" onclick="event.stopPropagation()">
+      <button type="button" onclick="closeSchModal()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition-all cursor-pointer"><i class="fa-solid fa-xmark"></i></button>
+      <div id="schModalContent" class="space-y-4">
+        <!-- 動態填入 -->
+      </div>
+      <div class="mt-8 pt-4 border-t border-slate-100 text-right">
+        <button type="button" onclick="closeSchModal()" class="px-6 py-3 rounded-2xl bg-slate-900 text-white font-black text-xs uppercase cursor-pointer">關閉視窗</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 頁尾 Footer -->
+  <footer class="bg-[#fff6ee] text-slate-600 py-10 border-t border-orange-200 mt-auto shadow-inner text-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <p class="text-xs sm:text-sm font-bold text-slate-600">&copy; 2026 呂氏家庭生活資訊網 版權所有 All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    function filterScholarship(category) {
+      ['all', 'local', 'clan'].forEach(cat => {
+        const btn = document.getElementById(`schTab-${cat}`);
+        if (btn) {
+          btn.className = (cat === category)
+            ? "px-4 py-2 rounded-xl bg-orange-600 text-white font-black text-xs transition-all cursor-pointer shadow-sm"
+            : "px-4 py-2 rounded-xl text-slate-700 hover:text-orange-600 font-black text-xs transition-all cursor-pointer";
+        }
+      });
+
+      const cards = document.querySelectorAll('.sch-card');
+      cards.forEach(card => {
+        const cardCat = card.getAttribute('data-category');
+        if (category === 'all' || cardCat === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function openApplicationDetail(type) {
+      const modal = document.getElementById('schModal');
+      const content = document.getElementById('schModalContent');
+      
+      if (type === 'local') {
+        content.innerHTML = `
+          <span class="px-3 py-1 rounded-full bg-orange-100 text-orange-700 font-black text-[10px] uppercase">新北市回饋地方專案</span>
+          <h3 class="text-xl sm:text-2xl font-black text-slate-900 mt-2">新北市立殯儀館及火化場 115 年度回饋地方經費勤學獎助學金</h3>
+          <p class="text-xs font-bold text-slate-400">發放日期：115年11月7日</p>
+          <div class="space-y-3 text-xs sm:text-sm text-slate-700 font-medium pt-3">
+            <p><strong>申請資格：</strong>設籍於新北市板橋區宏翠里滿六個月以上，就讀國內公私立國小、國中、高中職及大專院校之學生。</p>
+            <p><strong>評定標準：</strong>學業成績平均 80 分以上（或表現優良經導師推薦者），且未享有公費補助。</p>
+            <p><strong>備註說明：</strong>本年度申請已經圓滿結束，相關洽詢事項請逕洽宏翠里辦公處或板橋區公所民政課。</p>
+          </div>
+        `;
+      } else if (type === 'clan') {
+        content.innerHTML = `
+          <span class="px-3 py-1 rounded-full bg-orange-100 text-orange-700 font-black text-[10px] uppercase">家族宗親專案</span>
+          <h3 class="text-xl sm:text-2xl font-black text-slate-900 mt-2">祭祀公業法人桃園縣呂孟生公派下員子女獎學金申請</h3>
+          <p class="text-xs font-bold text-slate-400">年度專案公告</p>
+          <div class="space-y-3 text-xs sm:text-sm text-slate-700 font-medium pt-3">
+            <p><strong>申請資格：</strong>凡屬祭祀公業法人桃園縣呂孟生公派下員之在學子女均可依規提出申請。</p>
+            <p><strong>獎勵對象：</strong>國小組、國中組、高中/高職組及大專院校組學業成績優良者。</p>
+            <p><strong>準備文件：</strong>派下證明相關文件、當學期成績證明單與學生證影本。</p>
+          </div>
+        `;
+      }
+      modal.classList.remove('hidden');
+    }
+
+    function closeSchModal() {
+      document.getElementById('schModal').classList.add('hidden');
+    }
+  </script>
 </body>
 </html>
